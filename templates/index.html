@@ -6,8 +6,9 @@
   <title>Home page</title>
 </head>
 <body>
-  <h1>{{"Welcome " + first_name | upper}} {{last_name |upper}}</h1>
-  <h2>your are learning {{course}}</h2>
-  <h2>age:{{age}}</h2>
-</body>
+ {%if is_loged_in %}
+   <h2>Welcome back</h2>
+  {%else%}
+ <h1>Please Login</h1>
+{%endif%}
 </html>
