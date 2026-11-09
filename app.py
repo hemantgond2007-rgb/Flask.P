@@ -1,15 +1,12 @@
-from flask import Flask ,render_template,request,redirect,url_for
+from flask import Flask,render_template,request,url_for
 app=Flask(__name__)
+@app.route("/")
+def jinja_filter():
+    first_name="Hemant"
+    last_name="Gond"
+    age=20
+    course="Flask"
+    return render_template("index.html",first_name=first_name,last_name=last_name,age=age,course=course,)
 
-@app.route("/",methods=["GET","POST"])
-def login():
-    name=""
-    if request.method=="POST":
-        name=request.form.get("username")
-        return redirect(url_for("home",name=name))
-    return render_template("login.html",name=name)
-@app.route("/home/<name>")
-def home(name):
-    return render_template("index.html",name=name)
 if(__name__=="__main__"):
-    app.run(debug=True,port=5001)
+    app.run(debug=True)

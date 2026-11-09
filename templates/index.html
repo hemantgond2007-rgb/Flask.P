@@ -6,9 +6,8 @@
   <title>Home page</title>
 </head>
 <body>
-  {%if name%}
-    <h4>your Login succsessfull</h4>
-     <h1>Welcome {{name}}</h1>
-  {%endif%}
+  <h1>{{"Welcome " + first_name | upper}} {{last_name |upper}}</h1>
+  <h2>your are learning {{course}}</h2>
+  <h2>age:{{age}}</h2>
 </body>
 </html>
