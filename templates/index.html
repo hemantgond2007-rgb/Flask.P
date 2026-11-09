@@ -6,10 +6,9 @@
   <title>Home page</title>
 </head>
 <body>
-  <h1>Hello, {{name}}</h1>
-  <h2>You are learnig {{course}}</h2>
-  <h2>Your status is {{status}}</h2>
-  <p>This is my Home page</p>
-  
+  {%if name%}
+    <h4>your Login succsessfull</h4>
+     <h1>Welcome {{name}}</h1>
+  {%endif%}
 </body>
-</html>Fl
+</html>
