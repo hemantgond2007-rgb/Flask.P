@@ -6,9 +6,15 @@
   <title>Home page</title>
 </head>
 <body>
- {%if is_loged_in %}
-   <h2>Welcome back</h2>
-  {%else%}
- <h1>Please Login</h1>
-{%endif%}
+  <h2>Total course :{{course|length}}</h2>
+  {% for item in course%}
+    <li style="margin-left: 20px;">{{loop.index}} {{item}}</li>
+  {%endfor%}
+  <br><br>
+  <hr>
+  {%for key,value in student.items()%}
+   <li>{{key}} {{value}}</li>
+  {%endfor%}
+
+
 </html>
