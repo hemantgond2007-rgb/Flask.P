@@ -1,20 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home page</title>
-</head>
-<body>
-  <h2>Total course :{{course|length}}</h2>
-  {% for item in course%}
-    <li style="margin-left: 20px;">{{loop.index}} {{item}}</li>
-  {%endfor%}
-  <br><br>
-  <hr>
-  {%for key,value in student.items()%}
-   <li>{{key}} {{value}}</li>
-  {%endfor%}
-
-
-</html>
+{% extends"base.html"%}
+{%block content%}
+<h2>Welcome to Flask course</h2>
+<p>This is Home page</p>
+{%endblock%}
