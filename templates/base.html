@@ -8,18 +8,10 @@
 <body>
     <header>
         <h1>Hemant course</h1>
-        <hr>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/contact">Contact</a>
-        <a href="/about">About</a>
-      </nav>
+        {% include "components/navbar.html" %}
     </header>
     {%block content%}
     {%endblock%}
-    <hr>
-    <footer>
-        <p>copyright @2026</p>
-    </footer>
+    {% include "components/footer.html" %}
 </body>
 </html>
