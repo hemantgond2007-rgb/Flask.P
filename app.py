@@ -5,7 +5,14 @@ app=Flask(__name__)
 
 @app.route("/")
 def home():
-    return  render_template("index.html")
+    name="Hemant"
+    course="Flask"
+    status="Active"
+
+    return  render_template("index.html",
+                            name=name,
+                            course=course,
+                            status=status)
 
 if __name__=="__main__":
-    app.run(debug=True,port=5001)  
+    app.run(debug=True)  
