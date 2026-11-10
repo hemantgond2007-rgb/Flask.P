@@ -1,4 +1,27 @@
 {% extends"base.html"%}
 {%block content%}
 <h2>contact us page</h2>
+<form action="/contact" method="POST">
+    <div>
+        <label for="">Name:</label>
+       <input type="text" name="username" id="">
+    </div>
+    <br>
+       <div>
+        <label for="">email:</label>
+       <input type="email" name="email"id="">
+    </div>
+    <br>
+     <div>
+        <label for="">Password:</label>
+       <input type="password" name="password" id="">
+    </div>
+    <br>
+    <div>
+     <label for="">Message:</label>
+    <textarea name="Message" id=""></textarea>
+    </div>
+    <br>
+    <button type="submit">Submit</button>
+</form>
 {%endblock%}
